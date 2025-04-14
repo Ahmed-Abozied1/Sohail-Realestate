@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap');
+
+.container {
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    padding: 25px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.successMessage, .errorMessage {
+    text-align: center;
+    font-weight: 400;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.successMessage {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.errorMessage {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.nameInput, .commentInput {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #fff;
+    font-size: 17px;
+    transition: all 0.3s ease;
+    direction: rtl;
+    resize: none;
+
+}
+
+.nameInput:focus, .commentInput:focus {
+    outline: none;
+    border-color: #5c3d2c;
+    box-shadow: 0 0 10px rgba(250, 90, 10, 0.3);
+}
+
+.callbackBtn {
+    color: white;
+    background-color: #955f42;
+    border: none;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.callbackBtn:hover {
+    background-color: #5c3d2c;
+    ;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.callbackBtn:active {
+    transform: scale(0.98);
+}
+
+.callbackBtn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.agreeCheck {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.privacyPolicy {
+    text-decoration: underline;
+    color: #007bff;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+    .nameInput, .commentInput, .callbackBtn {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}

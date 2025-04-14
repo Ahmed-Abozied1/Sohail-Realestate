@@ -1,0 +1,156 @@
+
+/* <------------------- General Section Settings -------------------> */
+
+.sectionContainer {
+    /* min-height: 100vh; */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    align-items: center;
+    padding: 120px 0;
+    
+}
+
+
+/* <------------------- Section Title part -------------------> */
+
+.sectionTitle {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #5c3d2c;
+
+}
+
+
+/* <------------------- Section Text part -------------------> */
+
+.sectionTextBlock {
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 0 20px;
+    max-width: 740px;
+    direction: rtl;
+    font-size: 25px;
+    line-height: 1.55;
+    max-width: 580px;
+    color: #5c3d2c;
+ 
+}
+
+
+.greyLine {
+    position: absolute;
+    top: 40px;
+    right: 42px; /* بدلاً من left */
+    height: 600px;
+    width: 2px;
+    background-color: lightgrey;
+}
+
+
+.valueCard {
+    position: relative;
+    padding-right: 65px; /* بدلاً من padding-left */
+    line-height: 1.5;
+    height: 200px;
+}
+
+.valueNumCircle {
+    display: flex;
+    width: 45px;
+    height: 45px;
+    border: 2px solid white;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #5c3d2c;
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    right: 0; /* بدلاً من left: 0 */
+}
+
+
+.valueText {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.valueTitle {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.valueDesc {
+    font-size: 20px;
+    line-height: 1.55;
+    max-width: 580px;
+    color: #a76f42;
+}
+
+
+/* <------------------- Background picture part -------------------> */
+
+.background {
+    position: relative;
+    display: flex;
+    width: 90%;
+    max-width: 1100px;
+    color: #5c3d2c;
+
+}
+
+.background img {
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+}
+
+
+/* <------------------- Regulate the responsive behavior -------------------> */
+
+@media screen and (max-width: 980px) {
+
+    .sectionContainer {
+        padding: 100px 0;
+    }
+    
+    .sectionTitle {
+        font-size: 30px;
+    }
+
+    .bgText {
+        text-align: center;
+        width: 300px;
+        top: 20px;
+        right: 40px;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+
+    .valueTitle {
+        font-size: 20px;
+    }
+    
+    .valueDesc {
+        font-size: 16px;
+    }
+    
+    .bgText {
+        width: 250px;
+        font-size: 16px;
+        top: 10px;
+        right: 10px;
+    }
+
+}
