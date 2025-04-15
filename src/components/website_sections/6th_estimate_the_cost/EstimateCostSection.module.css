@@ -8,7 +8,7 @@
     flex-direction: column;
     row-gap: 60px;
     align-items: center;
-    padding: 120px 0;
+    padding: 100px 0;
 }
 
 
@@ -25,6 +25,8 @@
 }
 
 .orangeText {
+    font-size: 50px;
+    font-weight: 600;
     color: #5c3d2c;
 
 }
@@ -41,12 +43,17 @@
 
     .sectionContainer {
         row-gap: 20px;
-        padding: 100px 0;
+        padding: 40px 0;
     }
-
+.orangeText{
+    font-size: 40px;
+    font-weight: 600;
+    color: #5c3d2c;
+}
     .sectionTitle {
-        font-size: 30px;
-    }
+        font-size: 40px;
+        font-weight: 600;
+        color: #5c3d2c;    }
     
     .subTitle {
         font-size: 20px;

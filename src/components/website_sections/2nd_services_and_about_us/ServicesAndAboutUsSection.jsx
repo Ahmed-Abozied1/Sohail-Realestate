@@ -75,8 +75,8 @@ export default function AboutUsSection() {
             <div className={classes.aboutUsTextBlock}>
                 <div className={classes.aboutUsDesc}>
                     <p className={classes.aboutUsTitle}>مـــن نـــحــــن</p>
-                    <div className={classes.aboutUsDescTextt}>
-                        ﺗﺄﺳﺴﺖ ﺷﺮﻛﺔ ﺳﻬﻴﻞ ﺑﻤﺪﻳﻨﺔ ﺟﺪة ﻋﻠﻰ أﻳﺪي ﺳﻌﻮدﻳﻴﻦ ﻣﺘﺨﺼﺼﻴﻦ ﻓﻲ ﻣﺠﺎل اﻟﻌﻘﺎر...
+                    <div className={classes.aboutUsDescText}>
+                        ﺗﺄﺳﺴﺖ ﺷﺮﻛﺔ ﺳﻬﻴﻞ ﺑﻤﺪﻳﻨﺔ ﺟﺪة ﻋﻠﻰ أﻳﺪي ﺳﻌﻮدﻳﻴﻦ ﻣﺘﺨﺼﺼﻴﻦ ﻓﻲ ﻣﺠﺎل اﻟﻌﻘﺎر
                     </div>
                 </div>
 

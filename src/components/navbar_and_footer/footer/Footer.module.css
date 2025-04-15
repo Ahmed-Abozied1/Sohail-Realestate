@@ -1,101 +1,80 @@
 .footerContainer {
-    background: rgb(174,160,149);
-    padding: 135px 0;
-    position: relative;
+  background: #c8a182;
+  padding: 135px 0;
+  position: relative;
 }
 
 .footerContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 50px;
-    color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 80px;
+  color: white;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
-.title {
-    font-size: 40px;
-    font-weight: bold;
-}
-
-.telephones {
-    text-align: center;
-    font-size: 24px;
-    font-weight: 300;
+.footerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+  gap: 10px;
 }
 
 .telNumber {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .socialsBlock {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 20px;
-    font-size: 25px;
-    font-weight: 500;
+  font-size: 25px;
+  font-weight: 500;
 }
 
 .socialLogos {
-    display: flex;
-    column-gap: 10px;
-    padding-right: 10px;
+  display: flex;
+  gap: 15px;
 }
 
-.gitLogo, .linkedinLogo {
-    width: 40px;
-    transition: all 0.2s ease;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.gitLogo:hover, .linkedinLogo:hover {
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
-}
-
-.brandBlock {
-    position: absolute;
-    bottom: 30px;
-    text-align: center;
-    color: rgb(250, 90, 10);
-}
 .socialIcon {
-    margin: 0 10px;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 50px;
-    color: #5c3d2c;
-
+  font-size: 50px;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .socialIcon:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
-/* ......موبايل */
+
+.brandBlock {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  text-align: center;
+  color: rgb(250, 90, 10);
+}
+
+/* Media Queries */
 @media screen and (max-width: 768px) {
-    .footerContainer {
-      padding: 60px 20px;
-    }
-  
-    .title {
-      font-size: 28px;
-    }
-  
-    .telephones {
-      font-size: 18px;
-    }
-  
-    .socialsBlock {
-      font-size: 20px;
-    }
-  
-    .socialIcon {
-      font-size: 36px;
-    }
-  
-    .brandBlock {
-      position: static;
-      margin-top: 30px;
-    }
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0 20px;
   }
-  
+
+  .footerItem {
+    font-size: 18px;
+  }
+
+  .socialIcon {
+    font-size: 36px;
+  }
+
+  .brandBlock {
+    position: static;
+    margin-top: 30px;
+  }
+}

@@ -1,120 +1,125 @@
 /* <------------------- General Section Settings -------------------> */
 .sectionContainer {
-    min-height: 100vh;
-    background-color: rgb(251, 253, 255);
-    background-image: url('./images/first-background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+  min-height: 100vh;
+  background-color: rgb(251, 253, 255);
+  background-image: url('./images/first-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.filter {
+  min-height: 100vh;
+  /* background-color: hsla(0, 0%, 0%, 0.3); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerBody {
+  padding: 23vh 25px;
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 20px;
+  justify-items: end;
+}
+
+.textBlock {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+
+.titleBig {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.8;
+  padding: 0 15px;
+}
+
+.orangeTitleText {
+  font-size: 50px;
+  font-weight: 600;
+  color: #5c3d2c;
+}
+
+.orangeTitleText2 {
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.littleheader {
+  color: rgb(92, 61, 44);
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+.imageMobile {
+  display: none;
+}
+
+/* <------------------- Responsive Mobile View -------------------> */
+@media screen and (max-width: 980px) {
+  .sectionContainer {
+    background: none;
+    min-height: auto;
+    padding: 40px 0;
   }
-  
-   .filter {
-    min-height: 100vh;
-    background-color: hsla(0, 0%, 0%, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } 
-  
-  .innerBody {
-    padding: 23vh 25px;
-    width: 100%;
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 20px;
-    justify-items: end;
-  }
-  
-  .textBlock {
-    padding: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    color: white;
-    font-size: 18px;
-  }
-  
-  .titleBig {
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1.8;
-    padding: 0 15px;
-  }
-  
-  .orangeTitleText {
-    color: rgb(92, 61, 44);
-  }
-  
-  .orangeTitleText2 {
-    color: rgb(227, 222, 220);
-  }
-  
-  .littleheader {
-    color: rgb(92, 61, 44);
-    font-size: 25px;
-    font-weight: bold;
-    line-height: 1.6;
-    margin-top: 20px;
-  }
-  
-  .imageMobile {
-    display: none;
-  }
-  
-  /* <------------------- Responsive Mobile View -------------------> */
-  @media screen and (max-width: 980px) {
-    .sectionContainer {
-        background: none;
-        min-height: auto;
-       
-        border-radius: 8px;
-        
-      }
-   .filter{
+
+  .filter {
     height: auto;
     min-height: auto;
     align-items: flex-start;
-   
-   }
-
-    .innerBody {
-      /* padding: 8vh 20px; */
-      display: flex;
-      flex-direction: column;
-      row-gap: 30px;
-      align-items: center;
-    }
-    .titleBig{
-        display: none;
-    }
- 
-    .imageMobile {
-      display: block;
-      width: 100%;
-      height: 270px;
-      background-image: url('./images/first-background.jpg');
-      background-size: cover;
-      background-position: center;
-      border-radius: 10px;
-    }
-  
-    .textBlock {
-      align-items: center;
-      padding: 10px;
-      text-align: center;
-    }
-  
-  
-    .littleheader {
-      font-size: 22px;
-      line-height: 2;
-      margin-top: 15px;
-      text-align: center;
-      font-weight: bold;
-    }
+    padding: 0 15px;
   }
-  
+
+  .innerBody {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+  }
+
+  .titleBig {
+    display: none;
+  }
+
+  .imageMobile {
+    display: block;
+    width: 100%;
+    height: 220px;
+    background-image: url('./images/first-background.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin:20px;
+  }
+
+  .textBlock {
+    padding: 10px 5px;
+    font-size: 16px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .littleheader {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #5c3d2c;
+  }
+}

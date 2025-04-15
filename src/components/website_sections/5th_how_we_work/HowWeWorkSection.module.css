@@ -8,7 +8,7 @@
     flex-direction: column;
     row-gap: 60px;
     align-items: center;
-    padding: 120px 0;
+    padding: 100px 0;
     
 }
 
@@ -17,8 +17,8 @@
 
 .sectionTitle {
     text-align: center;
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 50px;
+    font-weight: 600;
     color: #5c3d2c;
 
 }
@@ -120,7 +120,8 @@
 @media screen and (max-width: 980px) {
 
     .sectionContainer {
-        padding: 100px 0;
+        padding: 60px 0; /* بدل 120px */
+
     }
     
     .sectionTitle {
@@ -137,7 +138,15 @@
 }
 
 @media screen and (max-width: 640px) {
+.sectionContainer{
+    padding: 40px 0; /* بدل 120px */
 
+}
+.sectionTitle{
+    font-size: 40px;
+    font-weight: 600;
+    color: #5c3d2c;
+}
     .valueTitle {
         font-size: 20px;
     }

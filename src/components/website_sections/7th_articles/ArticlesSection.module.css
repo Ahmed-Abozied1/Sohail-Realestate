@@ -7,7 +7,7 @@
     flex-direction: column;
     row-gap: 50px;
     align-items: center;
-    padding: 120px 25px;
+    padding: 100px 25px;
 }
 
 
@@ -18,11 +18,11 @@
     flex-direction: column;
     row-gap: 40px;
     text-align: center;
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 50px;
+    font-weight: 600;
+    color: #5c3d2c;
     padding: 0 25px;
     margin-bottom: 50px;
-    color: #5c3d2c;
    
 }
 
@@ -113,11 +113,13 @@
 
     .sectionContainer {
         row-gap: 30px;
-        padding: 100px 20px;
+        padding: 60px 20px;
     }
 
     .sectionTitle {
-        font-size: 30px;
+        font-size: 40px;
+    font-weight: 600;
+    color: #5c3d2c;
     }
 
     .promoContainer {
@@ -148,4 +150,11 @@
         height: initial;
     }
 
+}
+
+@media screen and (max-width: 640px) {
+
+    .sectionContainer {
+        padding: 40px 20px;
+    }
 }

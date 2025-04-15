@@ -8,7 +8,8 @@
     flex-direction: column;
     row-gap: 120px;
     align-items: center;
-    padding: 120px 0;
+    padding: 10px 0; /* بدل 120px */
+
 }
 
 
@@ -32,8 +33,8 @@
 }
 
 .bigText {
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 50px;
+    font-weight: 600;
     color: #5c3d2c;
 
 }
@@ -91,17 +92,23 @@
 
     .sectionContainer {
         row-gap: 80px;
-        padding: 100px 0;
+        padding: 60px 0; /* بدل 120px */
+
     }
 
     .bigText {
-        font-size: 30px;
+        font-size: 40px;
+        font-weight: 600;
+        color: #5c3d2c;
     }
 
 }
 
 @media screen and (max-width: 640px) {
+.sectionContainer{
+    padding: 40px 0; /* بدل 120px */
 
+}
     .picturesBlock {
         padding: 0 20px;
         column-gap: 10px;

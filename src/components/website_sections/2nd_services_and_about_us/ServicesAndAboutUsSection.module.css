@@ -3,14 +3,13 @@
 
 .sectionContainer {
     min-height: 100vh;
-    /* background-color: rgb(224, 224, 224); */
-    ;
     display: flex;
     flex-direction: column;
     row-gap: 80px;
     align-items: center;
-    padding: 120px 0;
+    padding: 80px 0; /* بدل 120px */
 }
+
 
 
 /* <------------------- Section Title part -------------------> */
@@ -28,8 +27,8 @@
 }
 
 .bigText {
-    font-size: 42px;
-    font-weight: bold;
+    font-size: 50px;
+    font-weight: 600;
     color: #5c3d2c;
 
 }
@@ -88,21 +87,7 @@
 
 }
 
-/* .cardPrice {
-    font-size: 30px;
-    font-weight: bold;
-    color: rgb(250, 90, 10);
-    min-height: 37px;
-} */
 
-/* .cardDescription {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: start;
-    font-size: 16px;
-    line-height: 1.55;
-} */
 
 .checkMark {
     color: rgb(250, 90, 10);
@@ -119,10 +104,11 @@
     align-items: center;
     margin-top: 80px;
     column-gap: 30px;
-    padding: 0 20px;
     max-width: 1400px;
     background-color: white;
     border-radius: 10px;
+    padding: 40px;
+
 
 }
 
@@ -132,7 +118,6 @@
     row-gap: 80px;
     align-items: center;
     text-align: center;
-    padding-bottom: 30px;
 }
 
 .aboutUsDesc {
@@ -142,13 +127,13 @@
 }
 
 .aboutUsTitle {
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 50px;
+    font-weight: 600;
     color: #5c3d2c;
 
 }
 
-.aboutUsDescTextt {
+.aboutUsDescText{
     font-size: 20px;
     line-height: 1.55;
     max-width: 580px;
@@ -203,6 +188,7 @@
     object-fit: cover;
     object-position: top;
     color: #5c3d2c;
+    border-radius: 8px;
 
 }
 
@@ -213,11 +199,14 @@
 
     .sectionContainer {
         row-gap: 20px;
-        padding: 100px 0;
+        padding: 60px 0; /* تقلل المسافة للموبايل والتابلت */
+
     }
 
     .bigText {
-        font-size: 30px;
+        font-size: 40px;
+        font-weight: 600;
+        color: #5c3d2c;
     }
 
     .smallText {
@@ -259,10 +248,13 @@
         align-items: center;
         row-gap: 50px;
         max-width: 800px;
+        padding-top: 40px;
     }
 
     .aboutUsTitle {
-        font-size: 30px;
+        font-size: 40px;
+        font-weight: 600;
+        color: #5c3d2c;
     }
 
     .aboutUsValues {
@@ -279,11 +271,18 @@
 
 @media screen and (max-width: 640px) {
 
+    .sectionContainer {
+        row-gap: 20px;
+        padding: 10px 0; /* تقلل المسافة للموبايل والتابلت */
+
+    }
     .aboutUsDescText {
-        font-size: 16px;
-       ;
+        font-size: 20px;
+        line-height: 1.2;
+       
     max-width: 300px;
-    color: #5c3d2c;
+    color: #a76f42;
+
     }
 
     .valueSymbol {
@@ -295,7 +294,8 @@
     }
 
     .valueDesc {
-        font-size: 14px;
+        font-size: 20px;
+        line-height: 1.2;
     }
 
 }
