@@ -3,7 +3,8 @@
     justify-self: center;
     width: 100%;
     user-select: none;
-    background-color: #aea095; /* بدلاً من darkgrey */
+    /* background-color: #aea095; بدلاً من darkgrey */
+    background-color: #c8a182;
 }
 
 .navbarItems {
@@ -33,9 +34,9 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* بيبرز اللوجو */
-    border-radius: 10px; /* لو اللوجو فيه حواف مربعة */
-    border: 1px solid #aaa;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* بيبرز اللوجو */
+    /* border-radius: 10px; 
+    ا    border: 1px solid #aaa;  */
 }
 
 .menuIcon {
@@ -89,10 +90,8 @@
     cursor: pointer;
 }
 
-.gitLogo:hover, .linkedinLogo:hover {
-    box-shadow: 0px 0px 20px  rgb(134, 94, 73);
-    ;
-}
+
+
 
 @media screen and (max-width: 980px) {
 
@@ -158,9 +157,9 @@
         transform: translateX(-50%); /* تحويله بشكل كامل للمنتصف */
         margin-right: 0; /* إزالة المسافة اليمنى */
         /* background: white; */
-        border-radius: 10px;
+        /* border-radius: 10px;
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* تأثير الظل */
-        
+         
     }
 
     .menuIcon {
