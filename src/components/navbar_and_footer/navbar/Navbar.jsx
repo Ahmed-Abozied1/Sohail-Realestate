@@ -35,9 +35,10 @@ export const Navbar = ({ refs }) => {
         } else {
             ref.current.scrollIntoView({ behavior: "smooth" });
         }
-        setHamburgerClicked(false);
-
-    };
+            // setHamburgerClicked(false);
+       
+    }
+   
 
     const getMenuAndSocialsUI = (isMobileSize) => {
         return (
