@@ -152,7 +152,10 @@
     }
     
     .valueDesc {
-        font-size: 16px;
+        font-size: 20px;
+        line-height: 1.55;
+        max-width: 580px;
+        color: #a76f42;
     }
     
     .bgText {

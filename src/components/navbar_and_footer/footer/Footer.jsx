@@ -1,10 +1,10 @@
 import { forwardRef } from "react";
 import { motion } from "framer-motion"; // 👈 إضافة framer-motion
 import classes from "./Footer.module.css";
-import gitLogo from "../images/github-logo.svg";
-import linkedinLogo from "../images/linkedin-logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faSnapchatGhost } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faSnapchatGhost,faTiktok  } from "@fortawesome/free-brands-svg-icons";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
 
 export const Footer = forwardRef((props, ref) => {
 
@@ -21,19 +21,18 @@ export const Footer = forwardRef((props, ref) => {
 <div className={classes.footerContent}>
 
 <div className={`${classes.footerItem} ${classes.socialsBlock}`}>
-  <p>الموبايـل</p>
-  <p>
+<FontAwesomeIcon icon={faPhone} className={classes.socialIcon}/>
+<p>
     <span className={classes.telNumber}>0555870889</span>
   </p>
 </div>
 
 <div className={`${classes.footerItem} ${classes.socialsBlock}`}>
-  <p>البريـد الإلكترونـي</p>
-  <p className={classes.telNumber}>suhailrealestatecompany@gmail.com</p>
+<FontAwesomeIcon icon={faEnvelope} className={classes.socialIcon} />
+<p className={classes.telNumber}>suhailrealestatecompany@gmail.com</p>
 </div>
 
 <div className={`${classes.footerItem} ${classes.socialsBlock}`}>
-  <p>تابعنا على منصات التواصل الاجتماعي</p>
   <motion.div 
     className={classes.socialLogos} 
     initial={{ opacity: 0, y: 20 }} 
@@ -46,14 +45,19 @@ export const Footer = forwardRef((props, ref) => {
     <a href="https://snapchat.com/t/4heR4k6D" target="blanc">
       <FontAwesomeIcon icon={faSnapchatGhost} className={classes.socialIcon} />
     </a>
+    <a href="https://www.tiktok.com/@suhail_realestate?_t=ZS-8vYdr5zf45a&_r=1" target="blanc">
+      <FontAwesomeIcon icon={faTiktok} className={classes.socialIcon} />
+    </a>
   </motion.div>
+  <p>تابعنا على منصات التواصل الاجتماعي</p>
+
 </div>
 
 </div>
 
 <div className={classes.brandBlock}>
 <motion.p 
-  style={{ textAlign: "center", color: "#5c3d2c", marginTop: "50px" }}
+  
   initial={{ opacity: 0 }}
   whileInView={{ opacity: 1 }}
   transition={{ delay: 0.6, duration: 0.8 }}

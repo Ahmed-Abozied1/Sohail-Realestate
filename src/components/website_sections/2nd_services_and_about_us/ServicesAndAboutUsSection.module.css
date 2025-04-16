@@ -34,9 +34,9 @@
 }
 
 .smallText {
-    font-size: 20px;
+    font-size: 25px;
     line-height: 1.55;
-    max-width: 580px;
+    font-weight: 500;
     color: #a76f42;
 
 }
@@ -134,8 +134,9 @@
 }
 
 .aboutUsDescText{
-    font-size: 20px;
+    font-size: 25px;
     line-height: 1.55;
+    font-weight: 500;
     max-width: 580px;
     color: #a76f42;
 
@@ -191,6 +192,9 @@
     border-radius: 8px;
 
 }
+/* ------ */
+
+  
 
 
 /* <------------------- Regulate the responsive behaviour -------------------> */
@@ -210,9 +214,9 @@
     }
 
     .smallText {
-        font-size: 20px;
-        line-height: 1.4;
-        max-width: 450px;
+        font-size: 22px;
+        line-height: 1.5;
+        max-width:100%;
     }
 
     .cardsBlock {
@@ -258,9 +262,12 @@
     }
 
     .aboutUsValues {
-        column-gap: 40px;
-        row-gap: 60px;
-    }
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        align-items: center;
+      }
+      
 
     .aboutUsImg {
         max-width: 100%;
@@ -268,7 +275,14 @@
     }
 
 }
-
+@media screen and (max-width: 768px) {
+    .aboutUsValues {
+      display: flex;
+      flex-direction: column;
+      row-gap: 50px;
+      align-items: center;
+    }
+  }
 @media screen and (max-width: 640px) {
 
     .sectionContainer {
@@ -277,12 +291,12 @@
 
     }
     .aboutUsDescText {
-        font-size: 20px;
-        line-height: 1.2;
-       
-    max-width: 300px;
-    color: #a76f42;
-
+        font-size: 22px;
+        line-height: 1.5;
+    
+        max-width: 400px;
+        color: #a76f42;
+        text-align: center;
     }
 
     .valueSymbol {

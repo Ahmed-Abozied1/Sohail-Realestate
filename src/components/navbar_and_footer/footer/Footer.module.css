@@ -1,5 +1,6 @@
 .footerContainer {
-  background: #c8a182;
+  /* background: #c8a182; */
+  background-color: #1f3145;
   padding: 100px 0;
   position: relative;
 }
@@ -10,7 +11,7 @@
   justify-content: center;
   align-items: flex-start;
   gap: 80px;
-  color: white;
+  color: #c8a180;
   flex-wrap: wrap;
   text-align: center;
 }
@@ -36,12 +37,12 @@
 
 .socialLogos {
   display: flex;
-  gap: 15px;
+  gap: 30px;
 }
 
 .socialIcon {
   font-size: 50px;
-  color: white;
+  color: #c8a180;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -55,7 +56,7 @@
   bottom: 30px;
   width: 100%;
   text-align: center;
-  color: rgb(250, 90, 10);
+   color: #b5621f; 
 }
 
 /* Media Queries */

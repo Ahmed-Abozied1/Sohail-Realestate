@@ -1,10 +1,13 @@
+ @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap'); 
+
 .navbar {    
     position: relative;
     justify-self: center;
     width: 100%;
     user-select: none;
     /* background-color: #aea095; بدلاً من darkgrey */
-    background-color: #c8a182;
+    /* background-color: #c8a182; */
+    background-color: #1f3145;
 }
 
 .navbarItems {
@@ -20,22 +23,44 @@
 }
 
 .navbarLogo {
-    height: 80px; /* بدلاً من 85 */
-    width: 100;  /* بدلاً من 91 */
-    position: relative;
-    cursor: pointer;
-    /* background: white; */
-    margin-left: 40px;
-    /* border-radius: 10px; */
-/* transform: scale(1.5); */
-}
-
-.logoImg {
-    width: 100%;
     height: 100%;
-    /* object-fit: contain; */
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    
+  }
+  
+.logoWithText {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  
+  .logoText {
+   font-family: "Cairo", sans-serif; 
+  color: white;
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+    white-space: nowrap; /* عشان تفضل في سطر واحد */
+  }
+
+  
+  .redText {
+    font-family: "Cairo", sans-serif; 
+
+    color: #c8a180;
+  }
+  
+ 
+  .logoImg {
+    height: 80px; /* حجم مناسب للشعار */
+    width: auto;
+    object-fit: contain;
     display: block;
   }
+  
   
 
 .menuIcon {
@@ -96,107 +121,81 @@
 }
 
 @media screen and (max-width: 980px) {
-
-    /* .navbar {    
-        position: static;
-        transition: all 1s;
-    } */
-
     .navbarItems {
-        height: 60px;
-        color: rgb(134, 94, 73);
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      direction: rtl; /* مهمة جداً عشان اللوجو ييجي يمين */
+      padding: 0 15px;
     }
-
-    .navbarMenu, .socialLogos {
-        display: none;
+  
+    .navbarMenu,
+    .socialLogos {
+      display: none;
     }
   
     .navbarMenuActive {
-        padding: 10px 0 0 0;
-        list-style: none;
-        display: table;
-        flex-direction: column;
-        width: 100%;
-        font-size: 1.2rem;
-        animation: slide ease-in-out 0.8s;
+      padding: 10px 0 0 0;
+      list-style: none;
+      display: table;
+      flex-direction: column;
+      width: 100%;
+      font-size: 1.2rem;
+      animation: slide ease-in-out 0.8s;
     }
-
+  
     @keyframes slide {
-        0% {
-            transform: translateY(-100%);
-            background: transparent;
-            opacity: 0;
-        }
-        100% {
-            transform: translateY(0%);
-            /* background-color: rgb(134, 94, 73); */
-            opacity: 1;
-        }
+      0% {
+        transform: translateY(-100%);
+        background: transparent;
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0%);
+        opacity: 1;
+      }
     }
-
+  
     .navbarLinks {
-        text-align: center;
-        padding: 1rem 0;
-        width: 100%;
-        display: table;
-        /* color: rgb(26, 26, 26); */
-        color: white;
+      text-align: center;
+      padding: 1rem 0;
+      width: 100%;
+      display: table;
+      color: white;
     }
-
-    /* .navbarLinks:hover {
-        background-color: transparent;
-        border-radius: 0;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    } */
-
-    /* تعديل مظهر اللوجو في الموبايل */
+  
+    /* ✅ تنسيق اللوجو */
     .navbarLogo {
-        height: 60px;
-        width: 100px;  /* تعديل العرض ليتناسب مع الحجم */
-        position: absolute;
-      
-        left: 15%; /* تحديد مكان اللوجو في المنتصف */
-        transform: translateX(-50%); /* تحويله بشكل كامل للمنتصف */
-        margin-right: 0; /* إزالة المسافة اليمنى */
-        /* background: white; */
-        /* border-radius: 10px;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* تأثير الظل */
-         
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      height: 60px;
+      direction: rtl;
     }
-
+  
+    .logoImg {
+      height: 40px;
+      width: auto;
+    }
+  
+    .logoText {
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      white-space: nowrap;
+      margin: 0;
+    }
+  
+    /* ✅ أيقونة المينيو */
     .menuIcon {
-        display: block;
-        position: absolute;
-        top: -12px;
-        right: 0;
-        transform: translate(-100%, 50%);
-        cursor: pointer;
+      display: block;
+      cursor: pointer;
     }
-
-    .hamburgerIcon, .xIcon {
-        width: 40px;
+  
+    .hamburgerIcon,
+    .xIcon {
+      width: 30px;
     }
-
-    /* .socialLogosActive {
-        display: flex;
-        padding: 2rem;
-        column-gap: 10px;
-        justify-content: center;
-        animation: appear ease-in-out 1s;
-    } */
-
-    /* .gitLogo:hover, .linkedinLogo:hover {
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    } */
-
-    @keyframes appear {
-        0% {
-            background: transparent;
-            opacity: 0;
-        }
-        100% {
-            /* background: rgb(224, 224, 224); */
-            opacity: 1;
-        }
-    }
-}
+  }
+  

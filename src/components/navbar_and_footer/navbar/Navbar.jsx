@@ -64,10 +64,15 @@ export const Navbar = ({ refs }) => {
             <nav className={classes.navbarItems}>
                 {/* Brand Logo */}
                 <div className={classes.navbarLogo}>
-                    <a href={process.env.REACT_APP_GIT_LINK} target="blanc">
-                        <img className={classes.logoImg} src={brandLogo} alt="Logo" />
-                    </a>
-                </div>
+  <a href={process.env.REACT_APP_GIT_LINK} target="blanc">
+    <img className={classes.logoImg} src={brandLogo} alt="Logo" />
+  </a>
+  <span className={classes.logoText}>
+  سُهيـل <span className={classes.redText}>العقارية</span>
+</span>
+</div>
+
+
 
                 {/* Hamburger Menu Icon */}
                 <div className={classes.menuIcon} onClick={handleHamburgerClick}>
