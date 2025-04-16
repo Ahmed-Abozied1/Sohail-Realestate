@@ -1,13 +1,17 @@
  @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap'); 
 
 .navbar {    
-    position: relative;
+position: fixed;
+  width: 100%;
+  z-index: 1000;
     justify-self: center;
     width: 100%;
     user-select: none;
+   
     /* background-color: #aea095; بدلاً من darkgrey */
     /* background-color: #c8a182; */
     background-color: #1f3145;
+    
 }
 
 .navbarItems {

@@ -18,6 +18,19 @@
   margin: 0;
   padding: 0;
 }
+/* يشيل الـ outline من كل العناصر عند الضغط */
+*:focus,
+*:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* يشيل التأثير الأزرق على موبايلات Android */
+a,
+button,
+div {
+  -webkit-tap-highlight-color: transparent;
+}
 
 .App {
   background: rgb(224, 224, 224);

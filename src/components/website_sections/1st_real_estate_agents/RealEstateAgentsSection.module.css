@@ -1,7 +1,7 @@
 /* <------------------- General Section Settings -------------------> */
 .sectionContainer {
   min-height: 100vh;
-  background-color: rgb(251, 253, 255);
+  background-color: hsl(240, 7%, 11%);
   background-image: url('./images/first-background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -120,6 +120,6 @@
     margin-top: 10px;
     text-align: center;
     font-weight: bold;
-    color: #5c3d2c;
+    color: #a76f42;
   }
 }
