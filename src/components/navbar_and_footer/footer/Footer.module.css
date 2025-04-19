@@ -11,7 +11,8 @@
   justify-content: center;
   align-items: flex-start;
   gap: 80px;
-  color: #c8a180;
+  /* color: #c8a180; */
+  color: white;
   flex-wrap: wrap;
   text-align: center;
 }
@@ -42,7 +43,7 @@
 
 .socialIcon {
   font-size: 50px;
-  color: #c8a180;
+  color: white;
   transition: 0.3s;
   cursor: pointer;
 }

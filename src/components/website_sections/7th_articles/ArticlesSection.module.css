@@ -2,7 +2,7 @@
 /* <------------------- General Section Settings -------------------> */
 
 .sectionContainer {
-    background-color: white;
+    background-color: #e0e0e0;
     display: flex;
     flex-direction: column;
     row-gap: 50px;
@@ -20,7 +20,8 @@
     text-align: center;
     font-size: 50px;
     font-weight: 600;
-    color: #5c3d2c;
+    /* color: #5c3d2c; */
+    color: #1f3145;
     padding: 0 25px;
     margin-bottom: 50px;
    
@@ -38,7 +39,7 @@
     width: 100%;
     max-width: 1140px;
     text-align: center;
-    background: #e1e1e1;
+    background: white;
     border-radius: 10px;
     row-gap: 20px; /* مسافة بين العنوان والفقرة لو في محتوى تاني */
 }
@@ -48,7 +49,7 @@
     font-size: 20px;
     line-height: 1.55;
     max-width: 580px;
-    color: #a76f42;
+    color: #1f3145;
 }
 
 

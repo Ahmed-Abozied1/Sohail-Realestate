@@ -3,7 +3,8 @@
 
 .sectionContainer {
     /* min-height: 100vh; */
-    background-color: white;
+    /* background-color: white; */
+    background-color: #e0e0e0;
     display: flex;
     flex-direction: column;
     row-gap: 60px;
@@ -19,7 +20,8 @@
     text-align: center;
     font-size: 50px;
     font-weight: 600;
-    color: #5c3d2c;
+    /* color: #5c3d2c; */
+    color: #1f3145;
 
 }
 
@@ -38,7 +40,7 @@
     font-size: 25px;
     line-height: 1.55;
     max-width: 580px;
-    color: #5c3d2c;
+    color:#1f3145;
  
 }
 
@@ -68,7 +70,8 @@
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    background-color: #5c3d2c;
+    /* background-color: #5c3d2c; */
+    background-color: #1f3145;
     color: white;
     font-size: 20px;
     font-weight: 900;
@@ -90,10 +93,9 @@
 }
 
 .valueDesc {
-    font-size: 20px;
+    font-size: 1.2rem;
     line-height: 1.55;
-    max-width: 580px;
-    color: #a76f42;
+    color: #1f3145;
 }
 
 
@@ -112,6 +114,7 @@
     width: 100%;
     object-fit: cover;
     filter: brightness(0.9);
+ 
 }
 
 
@@ -133,6 +136,7 @@
         width: 300px;
         top: 20px;
         right: 40px;
+    
     }
 
 }

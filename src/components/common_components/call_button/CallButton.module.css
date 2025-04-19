@@ -1,17 +1,16 @@
 .container {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 40px;
+    right: 40px;
     z-index: 1000;
   }
   
   .whatsappBtn {
-    background-color: #25D366;
+    background-color: #d2b5a0;
     border: none;
     border-radius: 50%;
     padding: 15px;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: all 0.3s;
   }
   
@@ -21,6 +20,6 @@
   
   .whatsappIcon {
     color: white;
-    font-size: 45px;
+    font-size: 30px;
   }
   

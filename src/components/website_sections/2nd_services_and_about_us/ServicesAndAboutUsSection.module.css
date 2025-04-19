@@ -22,22 +22,24 @@
     row-gap: 40px;
     padding: 0 20px;
     max-width: 560px;
-    background-color: rgb(225, 225, 225);
+    background-color: #1f3145;
 
 }
 
 .bigText {
     font-size: 50px;
     font-weight: 600;
-    color: #5c3d2c;
+    /* color: #5c3d2c; */
+    color: #e0e0e0;
 
 }
 
 .smallText {
-    font-size: 25px;
+    font-size: 1.5rem;
     line-height: 1.55;
-    font-weight: 500;
-    color: #a76f42;
+    max-width: 580px;
+    /* color: #a76f42; */
+    color: white;
 
 }
 /* <------------------- Cards Block part -------------------> */
@@ -55,23 +57,24 @@
 .card {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
     border: none;
-    border-radius: 20px;
+    border-radius: 8px;
     box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1);
     padding: 40px 30px;
     width: 100%;
     max-width: 280px;
-    background-color: white;
+    /* background-color: white; */
+    background-color:  #e0e0e0;
     text-align: center;
 }
 
 .cardTitle {
     font-size: 22px;
     font-weight: bold;
-    min-height: 120px;
+    min-height: 70px;
     line-height: 1.35;
     color: #5c3d2c;
+    /* color: #1f3145; */
 
 }
 
@@ -83,7 +86,7 @@
     font-size: 20px;
     line-height: 1.55;
     max-width: 580px;
-    color: #a76f42;
+    color: #1f3145;
 
 }
 
@@ -105,7 +108,7 @@
     margin-top: 80px;
     column-gap: 30px;
     max-width: 1400px;
-    background-color: white;
+    background-color: #e0e0e0;
     border-radius: 10px;
     padding: 40px;
 
@@ -210,7 +213,7 @@
     .bigText {
         font-size: 40px;
         font-weight: 600;
-        color: #5c3d2c;
+        color:white;
     }
 
     .smallText {
