@@ -141,7 +141,7 @@
     direction: rtl;
     padding: 0 15px;
   }
-
+ 
   .navbarMenu {
     display: none;
   }
@@ -163,6 +163,7 @@
     animation: slideInFromRight 0.3s ease-out forwards;
     z-index: 999;
     overflow-y: auto;
+    color: #1f3145;
   }
 
   .navbarMenuActive.closing {
@@ -242,5 +243,7 @@
   .hamburgerIcon,
   .xIcon {
     width: 30px;
+    color: #1f3145;
   }
+
 }

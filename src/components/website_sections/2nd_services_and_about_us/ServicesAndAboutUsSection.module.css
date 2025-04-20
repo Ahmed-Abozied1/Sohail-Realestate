@@ -112,7 +112,6 @@
     border-radius: 10px;
     padding: 40px;
 
-
 }
 
 .aboutUsTextBlock {
@@ -206,13 +205,13 @@
 
     .sectionContainer {
         row-gap: 20px;
+       margin-top: 30px;
         padding: 60px 0; /* تقلل المسافة للموبايل والتابلت */
 
     }
 
     .bigText {
-        font-size: 40px;
-        font-weight: 600;
+        font-size: 2.2rem;
         color:white;
     }
 
@@ -259,8 +258,7 @@
     }
 
     .aboutUsTitle {
-        font-size: 40px;
-        font-weight: 600;
+        font-size: 2.2rem;
         color: #5c3d2c;
     }
 

@@ -24,9 +24,10 @@
 
 .textBlock {
   color: white;
-  text-align: center;
-  max-width: 800px;
+  text-align: center;         /* من center إلى right */
+  direction: rtl;            /* لتأكيد الكتابة من اليمين لليسار */
 }
+
 
 .titleBig {
   font-size: 2.5rem;
@@ -52,11 +53,12 @@
 
 /* استجابة للشاشات الصغيرة */
 @media screen and (max-width: 768px) {
+
   .titleBig {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .littleheader {
-    font-size: 1rem;
+    font-size: .8rem;
   }
 }

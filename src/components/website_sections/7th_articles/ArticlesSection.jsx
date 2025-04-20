@@ -1,7 +1,10 @@
 import { forwardRef } from "react";
-import { articles } from "./constants";
+import { motion } from "framer-motion";
 import classes from "./ArticlesSection.module.css";
-import { motion } from "framer-motion"; // 👈 إضافة framer-motion
+import logo1 from "./images/1st_article_cover.jpg";
+import logo2 from "./images/2nd_article_cover.jpg";
+import logo3 from "./images/3st_article_cover.jpg";
+import logo4 from "./images/4st_article_cover.jpg";
 
 export const ArticlesSection = forwardRef((props, ref) => {
   return (
@@ -21,10 +24,10 @@ export const ArticlesSection = forwardRef((props, ref) => {
         transition={{ delay: 0.1 }}
         viewport={{ once: true }}
       >
-        لماذا نحـــن ؟
+        شركائــنا
       </motion.div>
 
-      {/* VK Ad */}
+      {/* Promo Text */}
       <motion.div
         className={classes.promoContainer}
         initial={{ opacity: 0, y: 20 }}
@@ -36,6 +39,14 @@ export const ArticlesSection = forwardRef((props, ref) => {
           ﺧﺒﺮة ﺗﻌﻮد ﻟﺴﻨﻮات ﻓﻲ اﻟﻌﻤﻞ ﻋﻠﻰ أرض اﻟﻮاﻗﻊ ﻧﻔﺨﺮ ﺑﺈدارة ذات رؤﻳﺔ ﺛﺎﻗﺒﺔ وﺧﺒﺮة ﻃﻮﻳﻠﺔ ﻓﻲ اﻟﻤﺠﺎل
           ﻧﺘﺒﻊ أﺣﺪث اﻷﺳﺎﻟﻴﺐ اﻟﻌﺎﻟﻤﻴﺔ ﻓﻲ اﻟﻌﻤﻞ وﻧﺤﺎول ﺗﻄﻮﻳﺮﻫﺎ
         </p>
+
+        {/* Brand Logos */}
+        <div className={classes.brandsContainer}>
+          <img src={logo1} alt="Brand 1" className={classes.brandImage} />
+          <img src={logo2} alt="Brand 2" className={classes.brandImage} />
+          <img src={logo3} alt="Brand 3" className={classes.brandImage} />
+          <img src={logo4} alt="Brand 4" className={classes.brandImage} />
+        </div>
       </motion.div>
     </motion.div>
   );

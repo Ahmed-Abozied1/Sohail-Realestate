@@ -97,9 +97,9 @@
     }
 
     .bigText {
-        font-size: 40px;
-        font-weight: 600;
-        color: #5c3d2c;
+        font-size: 2.2rem;
+
+        color: white;
     }
 
 }

@@ -13,7 +13,7 @@ const menuItems = [
     { title: "مشاريعنا", ref: protofolio },
     { title: "كيف نعمل", ref: howToWorkRef }, // تقليل طول النص
     { title: "اتصل بنا", ref: contactsRef }, // نص أقصر
-    { title: "لماذا نحن", ref: articlesRef },
+    { title: "شركائنا ", ref: articlesRef },
   ];
 
   const [hamburgerClicked, setHamburgerClicked] = useState(false);
