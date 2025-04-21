@@ -35,10 +35,10 @@ export const ArticlesSection = forwardRef((props, ref) => {
         transition={{ delay: 0.3 }}
         viewport={{ once: true }}
       >
-        {/* <p className={classes.description}>
+        <p className={classes.description}>
           ﺧﺒﺮة ﺗﻌﻮد ﻟﺴﻨﻮات ﻓﻲ اﻟﻌﻤﻞ ﻋﻠﻰ أرض اﻟﻮاﻗﻊ ﻧﻔﺨﺮ ﺑﺈدارة ذات رؤﻳﺔ ﺛﺎﻗﺒﺔ وﺧﺒﺮة ﻃﻮﻳﻠﺔ ﻓﻲ اﻟﻤﺠﺎل
           ﻧﺘﺒﻊ أﺣﺪث اﻷﺳﺎﻟﻴﺐ اﻟﻌﺎﻟﻤﻴﺔ ﻓﻲ اﻟﻌﻤﻞ وﻧﺤﺎول ﺗﻄﻮﻳﺮﻫﺎ
-        </p> */}
+        </p>
 
         {/* Brand Logos */}
         <div className={classes.brandsContainer}>
