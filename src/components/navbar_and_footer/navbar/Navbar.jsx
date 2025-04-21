@@ -9,11 +9,11 @@ export const Navbar = ({ refs }) => {
 
  // تغيير مصفوفة menuItems لتكون أكثر إحكاما
 const menuItems = [
-    { title: "خدماتنا", ref: servicesRef }, // إزالة الزخرفة الزائدة
-    { title: "مشاريعنا", ref: protofolio },
-    { title: "كيف نعمل", ref: howToWorkRef }, // تقليل طول النص
-    { title: "اتصل بنا", ref: contactsRef }, // نص أقصر
-    { title: "شركائنا ", ref: articlesRef },
+    { title: "خدماتنـا", ref: servicesRef }, // إزالة الزخرفة الزائدة
+    { title: "مشاريعنـا", ref: protofolio },
+    { title: "كيف نعمـل", ref: howToWorkRef }, // تقليل طول النص
+    { title: "تواصـل معنـا", ref: contactsRef }, // نص أقصر
+    { title: "شركائنـا ", ref: articlesRef },
   ];
 
   const [hamburgerClicked, setHamburgerClicked] = useState(false);
