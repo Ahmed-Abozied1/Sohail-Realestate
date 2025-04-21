@@ -32,7 +32,7 @@
 }
 
 .socialsBlock {
-  font-size: 25px;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .socialIcon {
-  font-size: 50px;
+  font-size:2.2rem;
   color: white;
   transition: 0.3s;
   cursor: pointer;
@@ -71,16 +71,17 @@
   }
 
   .footerItem {
-    font-size: 18px;
+    font-size: 1.2rem;
   }
 
   .socialIcon {
-    font-size: 36px;
+    font-size: 2rem;
   }
 
   .brandBlock {
     position: static;
     margin-top: 30px;
+    font-size: .8rem;
   }
 
 }

@@ -1,21 +1,30 @@
-.sectionContainer {
+.sectionWrapper {
   position: relative;
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 0;
 }
 
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* تراكب شفاف */
+  background-color: rgba(99, 93, 93, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,10 +33,9 @@
 
 .textBlock {
   color: white;
-  text-align: center;         /* من center إلى right */
-  direction: rtl;            /* لتأكيد الكتابة من اليمين لليسار */
+  text-align: center;
+  direction: rtl;
 }
-
 
 .titleBig {
   font-size: 2.5rem;
@@ -51,14 +59,13 @@
   color: #c8a180;
 }
 
-/* استجابة للشاشات الصغيرة */
+/* Responsive */
 @media screen and (max-width: 768px) {
-
   .titleBig {
     font-size: 1.5rem;
   }
 
   .littleheader {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }

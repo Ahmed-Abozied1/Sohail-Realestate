@@ -8,7 +8,7 @@
     width: 100%;
     max-width: 600px;
     padding: 25px;
-    background-color: #f9f9f9;
+    background-color: #fff8f0;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
@@ -20,6 +20,7 @@
     border-radius: 8px;
     font-size: 16px;
 }
+
 
 .successMessage {
     background-color: #d4edda;
@@ -36,7 +37,7 @@
     border-radius: 8px;
     border: 1px solid #ccc;
     padding: 15px;
-    background-color: #fff;
+    background-color: #ffffff ;
     font-size: 17px;
     transition: all 0.3s ease;
     direction: rtl;
@@ -46,13 +47,13 @@
 
 .nameInput:focus, .commentInput:focus {
     outline: none;
-    border-color: #5c3d2c;
-    box-shadow: 0 0 10px rgba(250, 90, 10, 0.3);
+    border-color: #c8a180 ;
+    box-shadow: 0 0 10px rgba(24, 9, 2, 0.3);
 }
 
 .callbackBtn {
     color: white;
-    background-color: #d2b5a0;
+    background-color: #c8a180 ;
     border: none;
     font-size: 18px;
     padding: 15px;
@@ -62,13 +63,14 @@
 }
 
 .callbackBtn:hover {
-    background-color: #5c3d2c;
+    background-color: #b88d6b ;
     ;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(.99);
 }
 
 .callbackBtn:active {
-    transform: scale(0.98);
+    transform: scale(.98);
 }
 
 .callbackBtn:disabled {
