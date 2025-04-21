@@ -8,7 +8,7 @@
     width: 100%;
     max-width: 600px;
     padding: 25px;
-    background-color: #fff8f0;
+    background-color: #e0e0e0;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
@@ -37,7 +37,7 @@
     border-radius: 8px;
     border: 1px solid #ccc;
     padding: 15px;
-    background-color: #ffffff ;
+    background-color: #e0e0e0 ;
     font-size: 17px;
     transition: all 0.3s ease;
     direction: rtl;
