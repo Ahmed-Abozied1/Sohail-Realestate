@@ -40,7 +40,7 @@ export const RealEstateAgentsSection = () => {
             </span>
             دايـماً معـاك
           </h1>
-          <p className={classes.littleheader}>سهيـل العقاريـه ثقـة تبـنـى مستقبلك</p>
+          <p className={classes.littleheader}>سهيـل العقاريـه ثقـة تبنـي مستقبلك</p>
         </div>
       </div>
     </div>
