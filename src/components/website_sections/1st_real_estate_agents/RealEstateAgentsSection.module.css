@@ -36,7 +36,8 @@
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 1.4;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
+
 }
 
 .orangeTitleText {
@@ -50,13 +51,15 @@
 .littleheader {
   font-size: 1.2rem;
   font-weight: bold;
-  line-height: 1.6;
+  line-height: 1.8;
   color: white;
 }
 
 @media screen and (max-width: 768px) {
   .titleBig {
     font-size: 1.5rem;
+    margin-bottom: 20px;
+
   }
 
   .littleheader {
