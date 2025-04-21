@@ -19,17 +19,19 @@ export const RealEstateAgentsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1, ease: "easeIn" }}
           viewport={{ once: true }}
-        >
+        >      
+
           <h1 className={classes.titleBig}>
             <span className={classes.orangeTitleText2}>
-              اخـتـــار مــكانــك، وخـلّــي{" "}
-              <span className={classes.orangeTitleText}>سُــهــيــل </span>
-              يـوصّــلـــك للـعـقـــار اللــي يناسبـــك
+            من اختيـارك … الى استقرارك,  
+            <span className={classes.orangeTitleText}>سُــهــيــل </span>
+          
             </span> 
+            دايـماً معـاك
+
           </h1>
           <p className={classes.littleheader}>
-            مـن اخــتــيــارك... لبــاب بـيـتــك، سُـهـيـل دايمــًا معــاك.
-          </p>
+سهيل العقاريه ثقة تبنى مستقبلك          </p>
         </motion.div>
       </div>
     </motion.div>

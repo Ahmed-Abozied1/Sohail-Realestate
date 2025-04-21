@@ -28,23 +28,29 @@ export const PortfolioAndFeedbackSection = forwardRef((props, ref) => {
         </div>
 
         <div className={classes.picturesBlock}>
-          {pictures.map((picture, index) => (
-            <motion.div
-              key={index}
-              className={classes.imgDiv}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.2, duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <img
-                className={classes.appartmentImg}
-                src={picture}
-                alt={`project-${index}`}
-                width={374}
-              />
-            </motion.div>
-          ))}
+        {pictures.map((picture, index) => {
+  let customClass = "";
+  if (index === 1) customClass = classes.imgWide; // الصورة التانية عريضة
+  if (index === 4) customClass = classes.imgTall; // الصورة الخامسة طويلة
+
+  return (
+    <motion.div
+      key={index}
+      className={`${classes.imgDiv} ${customClass}`}
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ delay: index * 0.2, duration: 0.5 }}
+      viewport={{ once: true }}
+    >
+      <img
+        className={classes.appartmentImg}
+        src={picture}
+        alt={`project-${index}`}
+      />
+    </motion.div>
+  );
+})}
+
         </div>
       </div>
     </motion.div>

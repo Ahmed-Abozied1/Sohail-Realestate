@@ -14,3 +14,7 @@ export const articles = [
         brief: "Are they right? lets find out..." 
     }
 ]
+//    <p className={classes.description}>
+// ﺧﺒﺮة ﺗﻌﻮد ﻟﺴﻨﻮات ﻓﻲ اﻟﻌﻤﻞ ﻋﻠﻰ أرض اﻟﻮاﻗﻊ ﻧﻔﺨﺮ ﺑﺈدارة ذات رؤﻳﺔ ﺛﺎﻗﺒﺔ وﺧﺒﺮة ﻃﻮﻳﻠﺔ ﻓﻲ اﻟﻤﺠﺎل
+// ﻧﺘﺒﻊ أﺣﺪث اﻷﺳﺎﻟﻴﺐ اﻟﻌﺎﻟﻤﻴﺔ ﻓﻲ اﻟﻌﻤﻞ وﻧﺤﺎول ﺗﻄﻮﻳﺮﻫﺎ
+// </p>
