@@ -83,7 +83,7 @@ export const PortfolioAndFeedbackSection = forwardRef((props, ref) => {
           className={classes.sectionTitle}
           variants={itemVariants}
         >
-          مشاريـعنـا
+          مشـاريــعنــا
         </motion.div>
 
         {/* مشروع 1 */}
