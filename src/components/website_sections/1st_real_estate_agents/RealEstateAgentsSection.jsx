@@ -5,11 +5,7 @@ import "swiper/css/effect-fade";
 
 import classes from "./RealEstateAgentsSection.module.css";
 
-import firstBg from "./images/first-background.jpg";
-import secondBg from "./images/3background.jpg";
-import thirdBg from "./images/3background.jpg";
-
-const backgroundImages = [firstBg, secondBg, thirdBg];
+import videoSource from "./images/v1.mp4"; // ✨ عدل المسار حسب الفيديو بتاعك
 
 export const RealEstateAgentsSection = () => {
   return (
@@ -17,18 +13,22 @@ export const RealEstateAgentsSection = () => {
       <Swiper
         modules={[Autoplay, EffectFade]}
         effect="fade"
-        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop={true}
         className={classes.swiperContainer}
       >
-        {backgroundImages.map((image, index) => (
-          <SwiperSlide key={index}>
-            <div
-              className={classes.slide}
-              style={{ backgroundImage: `url(${image})` }}
-            ></div>
-          </SwiperSlide>
-        ))}
+        <SwiperSlide>
+          <div className={classes.videoSlide}>
+            <video
+              className={classes.backgroundVideo}
+              src={videoSource}
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </div>
+        </SwiperSlide>
       </Swiper>
 
       <div className={classes.overlay}>
@@ -38,9 +38,11 @@ export const RealEstateAgentsSection = () => {
               من اختيـارك … الى استقرارك,
               <span className={classes.orangeTitleText}> سُــهــيــل </span>
             </span>
-            دايـماً معـاك
+            دايـماً معـاك
           </h1>
-          <p className={classes.littleheader}>سهيـل العقاريـه ثقـة تبنـي مستقبلك</p>
+          <p className={classes.littleheader}>
+            سهيـل العقاريـه ثقـة تبنـي مستقبلك
+          </p>
         </div>
       </div>
     </div>
