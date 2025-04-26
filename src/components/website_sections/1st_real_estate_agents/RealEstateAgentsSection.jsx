@@ -41,7 +41,8 @@ export const RealEstateAgentsSection = () => {
             دايـماً معـاك
           </h1>
           <p className={classes.littleheader}>
-            سهيـل العقاريـه ثقـة تبنـي مستقبلك
+          <span className={classes.orangeTitleText}> سُــهــيــل </span>
+          العقاريـه ثقـة تبنـي مستقبلك
           </p>
         </div>
       </div>

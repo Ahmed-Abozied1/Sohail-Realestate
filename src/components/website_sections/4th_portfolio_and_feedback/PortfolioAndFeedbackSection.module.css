@@ -1,149 +1,128 @@
-
-/* <------------------- General Section Settings -------------------> */
+/* PortfolioAndFeedbackSection.module.css */
 
 .sectionContainer {
-    /* min-height: 100vh; */
-    background-color: #1f3145;
+    padding: 40px 20px;
+    background: #1f3145;
     display: flex;
     flex-direction: column;
-    row-gap: 120px;
-    align-items: center;
-    padding: 10px 0; /* بدل 120px */
-    margin-bottom: 2.5rem;
-
-}
-
-
-/* <------------------- Portfolio Section -------------------> */
-
-.portfolioBlock {
+    gap: 10px; /* مسافة كويسة بين المشاريع */
+  }
+  .sectionTitle {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    row-gap: 80px;
-}
-
-.sectionTitle {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     row-gap: 40px;
-    color: white;
-
-}
-
-.bigText {
+    text-align: center;
     font-size: 50px;
     font-weight: 600;
+    color: #1f3145;
+    padding: 0 25px;
+    margin-bottom: 50px;
     color: white;
 
 }
+/* PortfolioAndFeedbackSection.module.css */
 
-/* .smallText {
-    font-size: 22px;
-    font-weight: 300;
-    color: #5c3d2c;
+/* تصغير حجم الأسهم */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 10px;
+  height: 10px;
+}
 
-} */
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size:15px;
+}
 
-.picturesBlock {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    width: 100%;
-    padding: 0 40px;
-  }
-  
-  .imgDiv {
-    width: 100%;
-    height: 100%;
-  }
+/* تنسيق النقاط */
+.swiper-pagination {
+  position: relative;
+  margin-top: 15px;
+}
 
-  .appartmentImg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-  }
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  opacity: 1;
+}
 
-  .imgWide {
-    grid-column: span 2;
-    height: 250px;
-  }
-  
-  .imgTall {
-    height: 500px;
-  }
-/* <------------------- Feedback Section -------------------> */
+.swiper-pagination-bullet-active {
+  background: #000;
+}
 
-.feedbackBlock {
+/* تحسين المساحة حول السلايدر */
+.swiperContainer {
+  padding-bottom: 30px;
+}
+
+.projectBlock {
+  margin-bottom: 40px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #d2b5a0; /* لون الأسهم */
+  background: rgba(255, 255, 255, 0.8); /* خلفية الأسهم */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px; /* حجم الأيقونة */
+}
+  .projectBlock {
     display: flex;
     flex-direction: column;
-    row-gap: 100px;
-}
-
-
-/* <------------------- Regulate the responsive behavior -------------------> */
-
-@media screen and (max-width: 1300px) {
-    
-    .picturesBlock {
-        grid-template-columns: 1fr; /* عمود واحد */
-        padding: 0 20px;
-        gap: 15px;
-      }
-    
-    .imgDiv {
-        width: 100%;
+    align-items: center;
+    gap: 10px; /* زودت المسافة بين العنوان والسلايدر */
+  }
+  
+  .projectTitle {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px; /* مسافة بسيطة بين الاسم والسلايدر */
+  }
+  
+  .swiperContainer {
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .slideImage {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .slideImage {
+      height: 220px;
     }
-    .imgWide {
-        grid-column: span 1; /* نلغي التمدد */
-        height: 200px; /* نضبط الارتفاع بشكل مناسب */
-      }
-    
-      .imgTall {
-        height: 300px;
-      }
-}
-
-@media screen and (max-width: 980px) {
-
-    .sectionContainer {
-        row-gap: 80px;
-        padding: 60px 0; /* بدل 120px */
-
-    }
-
-    .bigText {
+    .sectionTitle{
         font-size: 2.2rem;
 
+    
         color: white;
     }
-
-}
-
-@media screen and (max-width: 640px) {
-.sectionContainer{
-    padding: 40px 0; /* بدل 120px */
-
-}
-.picturesBlock {
-    grid-template-columns: 1fr; /* عمود واحد */
-    padding: 0 20px;
-    gap: 15px;
-  }
-
-    .imgDiv {
-        padding-bottom: 5px;
+  
+    .projectTitle {
+        font-size: 20px;
     }
-    .imgWide {
-        grid-column: span 1; /* نلغي التمدد */
-        height: 200px; /* نضبط الارتفاع بشكل مناسب */
-      }
-    
-      .imgTall {
-        height: 300px;
-      }
-
-}
+  }
+  
+  @media (max-width: 480px) {
+    .slideImage {
+      height: 180px;
+    }
+  
+    .projectTitle {
+        font-size: 20px;
+    }
+  }
+  
