@@ -133,7 +133,7 @@ export const PortfolioAndFeedbackSection = forwardRef((props, ref) => {
           variants={itemVariants}
         >
           <motion.h2 className={classes.projectTitle} variants={itemVariants}>
-            سهــل بوليفارد - حى القرينيه
+            سهــيل بوليفارد - حى القرينيه
           </motion.h2>
           
           <Swiper
