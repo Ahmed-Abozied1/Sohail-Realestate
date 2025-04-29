@@ -37,10 +37,18 @@
 }
 
 .cardTitle {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-  padding: 15px;
+  background-color: #1f3145;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 15px auto 20px auto;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 /* مودال */
 .modal {
