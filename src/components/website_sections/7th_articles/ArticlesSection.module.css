@@ -16,7 +16,6 @@
     font-weight: 600;
     color: #1f3145;
     padding: 0 25px;
-    margin-bottom: 50px;
   }
   
   .promoContainer {
@@ -71,14 +70,14 @@
   @media screen and (max-width: 980px) {
     .sectionContainer {
       row-gap: 30px;
-      padding: 60px 20px;
+      padding: 50px 20px;
     }
   
     .sectionTitle {
         font-size: 2.2rem;
 
-      color: #5c3d2c;
-    }
+        color: #1f3145;
+      }
   
     .promoContainer {
       flex-direction: column;

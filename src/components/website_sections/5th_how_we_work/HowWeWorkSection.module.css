@@ -7,9 +7,8 @@
     background-color: #e0e0e0;
     display: flex;
     flex-direction: column;
-    row-gap: 60px;
     align-items: center;
-    padding: 100px 0;
+    padding: 40px 0;
     
 }
 
@@ -130,6 +129,9 @@
     .sectionTitle {
         font-size: 2.2rem;
 
+        color: #1f3145;
+
+
     }
 
     .bgText {
@@ -150,7 +152,7 @@
 .sectionTitle{
     font-size: 2.2rem;
 
-    color: #5c3d2c;
+    color: #1f3145;
 }
     .valueTitle {
         font-size: 20px;
@@ -160,7 +162,7 @@
         font-size: 20px;
         line-height: 1.55;
         max-width: 580px;
-        color: #a76f42;
+        color: #1f3145;
     }
     
     .bgText {
