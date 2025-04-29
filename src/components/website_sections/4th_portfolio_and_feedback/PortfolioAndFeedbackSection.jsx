@@ -1,10 +1,17 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import classes from "./PortfolioAndFeedbackSection.module.css";
 
 import project1Pic1 from "./images/1.jpg";
 import project1Pic2 from "./images/2.jpg";
 import project1Pic3 from "./images/3.jpg";
 import project1Pic4 from "./images/4.jpg";
 import project1Pic5 from "./images/5.jpg";
-
 import project2Pic6 from "./images/6.jpg";
 import project2Pic7 from "./images/7.jpg";
 import project2Pic8 from "./images/8.jpg";
@@ -13,161 +20,87 @@ import project2Pic10 from "./images/10.jpg";
 import project2Pic11 from "./images/11.jpg";
 import project2Pic12 from "./images/12.jpg";
 import project2Pic13 from "./images/13.jpg";
-// PortfolioAndFeedbackSection.jsx
-import { forwardRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Navigation, Pagination } from "swiper/modules";
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import classes from "./PortfolioAndFeedbackSection.module.css";
 
-// ... استيراد الصور ...
+const projects = [
+  {
+    id: 1,
+    title: "سهيــل 165 - حى الزهـراء",
+    images: [
+      project1Pic1, project1Pic2, project1Pic3,
+      project1Pic4, project1Pic5, project2Pic6,
+      project2Pic7, project2Pic8, project2Pic9
+    ]
+  },
+  {
+    id: 2,
+    title: "سهيــل بوليفارد - حى القرينية",
+    images: [
+      project2Pic10, project2Pic11, project2Pic13, project2Pic12
+    ]
+  },
+  {
+    id: 3,
+    title: "مشروع الساحل - جنوب جده",
+    images: [
+      project1Pic1, project1Pic2, project1Pic3
+    ]
+  }
+];
 
-export const PortfolioAndFeedbackSection = forwardRef((props, ref) => {
-  const project1Images = [
-    project1Pic1, project1Pic2, project1Pic3, project1Pic4, project1Pic5, 
-    project2Pic6, project2Pic7, project2Pic8, project2Pic9
-  ];
-  const project2Images = [project2Pic10, project2Pic11, project2Pic13, project2Pic12];
-
-  // تأثيرات الحركة
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 10
-      }
-    }
-  };
-
-  const slideVariants = {
-    hidden: { scale: 0.95, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
+export const PortfolioAndFeedbackSection = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <motion.div 
-      ref={ref} 
+    <motion.div
       className={classes.sectionContainer}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={containerVariants}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
     >
-      <AnimatePresence>
-        {/* عنوان القسم مع تأثير */}
-        <motion.div 
-          className={classes.sectionTitle}
-          variants={itemVariants}
-        >
-          مشـاريــعنــا
-        </motion.div>
+      <motion.h2 className={classes.sectionTitle}>مشاريعنا</motion.h2>
 
-        {/* مشروع 1 */}
-        <motion.div 
-          className={classes.projectBlock}
-          variants={itemVariants}
-        >
-          <motion.h2 className={classes.projectTitle} variants={itemVariants}>
-            سهيــل 165 - حى الزهـراء
-          </motion.h2>
-          
-          <Swiper
-            modules={[Navigation, Pagination]}
-            navigation
-            pagination={{
-              clickable: true,
-              dynamicBullets: true
-            }}
-            loop={false}
-            spaceBetween={20}
-            slidesPerView={1}
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-            className={classes.swiperContainer}
+      <div className={classes.cardsGrid}>
+        {projects.map((project) => (
+          <motion.div
+            key={project.id}
+            className={classes.card}
+            onClick={() => setSelectedProject(project)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
           >
-            {project1Images.map((img, idx) => (
-              <SwiperSlide key={idx}>
-                <motion.img 
-                  src={img} 
-                  alt={`project1-${idx}`} 
-                  className={classes.slideImage}
-                  variants={slideVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-50px" }}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </motion.div>
+            <img src={project.images[0]} alt="Project cover" className={classes.cardImage} />
+            <h3 className={classes.cardTitle}>{project.title}</h3>
+          </motion.div>
+        ))}
+      </div>
 
-        {/* مشروع 2 */}
-        <motion.div 
-          className={classes.projectBlock}
-          variants={itemVariants}
-        >
-          <motion.h2 className={classes.projectTitle} variants={itemVariants}>
-    سهيــل بوليفارد - حى القرينية
-          </motion.h2>
-          
-          <Swiper
-            modules={[Navigation, Pagination]}
-            navigation
-            pagination={{
-              clickable: true,
-              dynamicBullets: true
-            }}
-            loop={false}
-            spaceBetween={20}
-            slidesPerView={1}
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-            className={classes.swiperContainer}
-          >
-            {project2Images.map((img, idx) => (
-              <SwiperSlide key={idx}>
-                <motion.img 
-                  src={img} 
-                  alt={`project2-${idx}`} 
-                  className={classes.slideImage}
-                  variants={slideVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-50px" }}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </motion.div>
-      </AnimatePresence>
+      {/* المودال */}
+      {selectedProject && (
+        
+        <div className={classes.modal}>
+          <div className={classes.modalContent}>
+            <button className={classes.closeButton} onClick={() => setSelectedProject(null)}>
+              &times;
+            </button>
+            <h3 className={classes.modalTitle}>{selectedProject.title}</h3>
+
+            <Swiper
+              modules={[ Pagination]}
+              
+              pagination={{ clickable: true }}
+              spaceBetween={20}
+              slidesPerView={1}
+              className={classes.modalSwiper}
+            >
+              {selectedProject.images.map((img, i) => (
+                <SwiperSlide key={i}>
+                  <img src={img} alt={`img-${i}`} className={classes.modalImage} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+      )}
     </motion.div>
   );
-});
+};
