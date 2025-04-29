@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import {  Pagination } from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -20,6 +20,13 @@ import project2Pic10 from "./images/10.jpg";
 import project2Pic11 from "./images/11.jpg";
 import project2Pic12 from "./images/12.jpg";
 import project2Pic13 from "./images/13.jpg";
+import project3Pic14 from "./images/14.jpg";
+import project3Pic15 from "./images/15.jpg";
+import project3Pic16 from "./images/16.jpg";
+import project3Pic17 from "./images/17.jpg";
+import project3Pic18 from "./images/18.jpg";
+import project3Pic19 from "./images/19.jpg";
+import project3Pic20 from "./images/20.jpg";
 
 const projects = [
   {
@@ -40,9 +47,9 @@ const projects = [
   },
   {
     id: 3,
-    title: "مشروع الساحل - جنوب جده",
+    title: "مشروع فلل - جنوب جدة",
     images: [
-      project1Pic1, project1Pic2, project1Pic3
+      project3Pic14, project3Pic15, project3Pic16,project3Pic17,project3Pic18,project3Pic19,project3Pic20
     ]
   }
 ];
@@ -57,7 +64,7 @@ export const PortfolioAndFeedbackSection = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
     >
-      <motion.h2 className={classes.sectionTitle}>مشاريعنا</motion.h2>
+      <motion.h2 className={classes.sectionTitle}>مشاريعنـــــــا</motion.h2>
 
       <div className={classes.cardsGrid}>
         {projects.map((project) => (

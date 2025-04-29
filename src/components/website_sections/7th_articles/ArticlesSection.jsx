@@ -24,7 +24,7 @@ export const ArticlesSection = forwardRef((props, ref) => {
         transition={{ delay: 0.1 }}
         viewport={{ once: true }}
       >
-        شركائــنا
+        شركائــنــا
       </motion.div>
 
       {/* Promo Text */}
