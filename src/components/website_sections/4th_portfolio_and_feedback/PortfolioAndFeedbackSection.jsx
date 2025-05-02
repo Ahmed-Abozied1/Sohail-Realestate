@@ -26,7 +26,7 @@ import project3Pic16 from "./images/16.jpg";
 import project3Pic17 from "./images/17.jpg";
 import project3Pic18 from "./images/18.jpg";
 import project3Pic19 from "./images/19.jpg";
-import project3Pic20 from "./images/20.jpg";
+
 
 const projects = [
   {
@@ -49,7 +49,7 @@ const projects = [
     id: 3,
     title: "مشروع فلل - جنوب جدة",
     images: [
-      project3Pic14, project3Pic15, project3Pic16,project3Pic17,project3Pic18,project3Pic19,project3Pic20
+      project3Pic14, project3Pic15, project3Pic16,project3Pic17,project3Pic18,project3Pic19
     ]
   }
 ];
@@ -83,7 +83,7 @@ export const PortfolioAndFeedbackSection = () => {
 
       {/* المودال */}
       {selectedProject && (
-        
+  
         <div className={classes.modal}>
           <div className={classes.modalContent}>
             <button className={classes.closeButton} onClick={() => setSelectedProject(null)}>
