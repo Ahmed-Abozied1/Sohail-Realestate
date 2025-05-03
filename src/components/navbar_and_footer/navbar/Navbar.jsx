@@ -3,17 +3,17 @@ import classes from "./Navbar.module.css";
 import brandLogo from "../images/navbar-logo.png";
 import hambMenu from "../images/hamburger-menu.svg";
 import xMenu from "../images/x-menu.svg";
+import { Link } from 'react-router-dom';
 
 export const Navbar = ({ refs }) => {
   const { servicesRef, protofolio, howToWorkRef, articlesRef, contactsRef } = refs;
 
- // تغيير مصفوفة menuItems لتكون أكثر إحكاما
-const menuItems = [
-    { title: "خدماتنـا", ref: servicesRef }, // إزالة الزخرفة الزائدة
+  const menuItems = [
+    { title: "خدماتنـا", ref: servicesRef },
     { title: "مشاريعنـا", ref: protofolio },
-    { title: "كيف نعمـل", ref: howToWorkRef }, // تقليل طول النص
-    { title: "تواصـل معنـا", ref: contactsRef }, // نص أقصر
-    { title: "شركائنـا ", ref: articlesRef },
+    { title: "كيف نعمـل", ref: howToWorkRef },
+    { title: "تواصـل معنـا", ref: contactsRef },
+    { title: "شركائنـا", ref: articlesRef },
   ];
 
   const [hamburgerClicked, setHamburgerClicked] = useState(false);
@@ -35,8 +35,17 @@ const menuItems = [
 
   const scrollToSection = (title, ref) => {
     if (!ref?.current) return;
-    ref.current.scrollIntoView({ behavior: "smooth" });
-    handleHamburgerClick(); // إغلاق القائمة عند النقر على عنصر
+
+    const offset = 120; // ارتفاع الـ Navbar أو المساحة المطلوبة
+    const elementPosition = ref.current.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+
+    handleHamburgerClick(); // إغلاق القائمة بعد الضغط
   };
 
   useEffect(() => {
@@ -51,14 +60,16 @@ const menuItems = [
   const getMenuUI = (isMobileSize) => (
     <ul 
       ref={isMobileSize ? menuRef : null}
-      className={isMobileSize ? 
-        `${classes.navbarMenuActive} ${hamburgerClicked ? '' : classes.closing}` : 
-        `${classes.navbarMenu}`}
+      className={
+        isMobileSize
+          ? `${classes.navbarMenuActive} ${hamburgerClicked ? '' : classes.closing}`
+          : `${classes.navbarMenu}`
+      }
     >
       {menuItems.map((item, index) => (
-        <li key={index} >
-          <div 
-            className={classes.navbarLinks} 
+        <li key={index}>
+          <div
+            className={classes.navbarLinks}
             onClick={() => scrollToSection(item.title, item.ref)}
           >
             {item.title}
@@ -72,9 +83,9 @@ const menuItems = [
     <div className={`${classes.navbar} ${isScrolled ? classes.navbarScrolled : ''}`}>
       <nav className={classes.navbarItems}>
         <div className={classes.navbarLogo}>
-          <a href="/" target="blanc">
+          <Link to="/" target="blanc">
             <img className={classes.logoImg} src={brandLogo} alt="Logo" />
-          </a>
+          </Link>
           <span className={classes.logoText}>
             سُهيـل <span className={classes.redText}>العقارية</span>
           </span>

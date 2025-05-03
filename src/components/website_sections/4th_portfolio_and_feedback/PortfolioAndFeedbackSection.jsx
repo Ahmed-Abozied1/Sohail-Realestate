@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {  Pagination } from "swiper/modules";
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import classes from "./PortfolioAndFeedbackSection.module.css";
 
 import project1Pic1 from "./images/1.jpg";
@@ -27,7 +29,6 @@ import project3Pic17 from "./images/17.jpg";
 import project3Pic18 from "./images/18.jpg";
 import project3Pic19 from "./images/19.jpg";
 
-
 const projects = [
   {
     id: 1,
@@ -49,16 +50,18 @@ const projects = [
     id: 3,
     title: "مشروع فلل - جنوب جدة",
     images: [
-      project3Pic14, project3Pic15, project3Pic16,project3Pic17,project3Pic18,project3Pic19
+      project3Pic14, project3Pic15, project3Pic16,
+      project3Pic17, project3Pic18, project3Pic19
     ]
   }
 ];
 
-export const PortfolioAndFeedbackSection = () => {
+export const PortfolioAndFeedbackSection = forwardRef((props, ref) => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
     <motion.div
+      ref={ref} // ✅ لازم هنا عشان السكول يشتغل
       className={classes.sectionContainer}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -81,9 +84,7 @@ export const PortfolioAndFeedbackSection = () => {
         ))}
       </div>
 
-      {/* المودال */}
       {selectedProject && (
-  
         <div className={classes.modal}>
           <div className={classes.modalContent}>
             <button className={classes.closeButton} onClick={() => setSelectedProject(null)}>
@@ -92,8 +93,7 @@ export const PortfolioAndFeedbackSection = () => {
             <h3 className={classes.modalTitle}>{selectedProject.title}</h3>
 
             <Swiper
-              modules={[ Pagination]}
-              
+              modules={[Pagination]}
               pagination={{ clickable: true }}
               spaceBetween={20}
               slidesPerView={1}
@@ -110,4 +110,4 @@ export const PortfolioAndFeedbackSection = () => {
       )}
     </motion.div>
   );
-};
+});
