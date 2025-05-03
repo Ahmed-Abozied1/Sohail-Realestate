@@ -64,6 +64,9 @@
     font-size: 1.5rem;
     margin-bottom: 20px;
   }
+  .swiper-button-next, .swiper-button-prev {
+    display: none !important;
+  }
 
   .littleheader {
     font-size: 0.8rem;

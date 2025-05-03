@@ -8,11 +8,17 @@
   .whatsappBtn {
     background-color: #d2b5a0;
     border: none;
-    border-radius: 50%;
-    padding: 15px;
+    border-radius: 50% !important;
+    padding: 0; /* إلغاء padding لتجنب زيادة الحجم غير المرغوب فيه */
+    width: 60px; /* عرض ثابت للزر */
+    height: 60px; /* ارتفاع ثابت للزر */
     cursor: pointer;
     transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  
   
   .whatsappBtn:hover {
     transform: scale(1.1);
