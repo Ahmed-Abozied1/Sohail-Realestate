@@ -10,8 +10,8 @@
     border: none;
     border-radius: 50% !important;
     padding: 0; /* إلغاء padding لتجنب زيادة الحجم غير المرغوب فيه */
-    width: 60px; /* عرض ثابت للزر */
-    height: 60px; /* ارتفاع ثابت للزر */
+    width: 55px; /* عرض ثابت للزر */
+    height: 55px; /* ارتفاع ثابت للزر */
     cursor: pointer;
     transition: all 0.3s;
     display: flex;
