@@ -49,7 +49,7 @@ export const Footer = forwardRef((props, ref) => {
       <FontAwesomeIcon icon={faTiktok} className={classes.socialIcon} />
     </a>
   </motion.div>
-  <p>تابعنا على منصات التواصل الاجتماعي</p>
+  <p className={classes.telNumber}>تابعنا على منصات التواصل الاجتماعي</p>
 
 </div>
 
