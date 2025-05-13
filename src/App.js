@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
+import { Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/navbar_and_footer/navbar/Navbar";
 import { RealEstateAgentsSection } from './components/website_sections/1st_real_estate_agents/RealEstateAgentsSection';
 import { ServicesAndAboutUsSection } from './components/website_sections/2nd_services_and_about_us/ServicesAndAboutUsSection';
@@ -9,8 +9,9 @@ import { ArticlesSection } from './components/website_sections/7th_articles/Arti
 import { Footer } from './components/navbar_and_footer/footer/Footer';
 import { BackToTopButton } from './components/common_components/back_to_top_button/BackToTopButton';
 import { CallButton } from './components/common_components/call_button/CallButton';
+import { PrivacyPolicy } from "./components/common_components/privacy_policy/PrivacyPolicy";
 import { LazyMotion, domAnimation } from "framer-motion";
-
+import { useRef, useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
@@ -22,13 +23,7 @@ function App() {
   const articlesRef   = useRef(null);
   const contactsRef   = useRef(null);
 
-  const refs = { 
-    servicesRef, 
-    protofolio, 
-    howToWorkRef, 
-    articlesRef, 
-    contactsRef
-  };
+  const refs = { servicesRef, protofolio, howToWorkRef, articlesRef, contactsRef };
 
   useEffect(() => {
     if ("scrollRestoration" in window.history) {
@@ -39,7 +34,7 @@ function App() {
 
   useEffect(() => {
     const handleLoad = () => {
-      setTimeout(() => setLoading(false), 1000); // optional delay
+      setTimeout(() => setLoading(false), 1000);
     };
 
     if (document.readyState === "complete") {
@@ -59,19 +54,26 @@ function App() {
         </div>
       ) : (
         <LazyMotion features={domAnimation}>
-          <>
-            <Navbar refs={refs} />
-            <RealEstateAgentsSection />
-            
-            <ServicesAndAboutUsSection ref={servicesRef} />
-            <PortfolioAndFeedbackSection ref={protofolio} />
-            <HowWeWorkSection ref={howToWorkRef}/>
-            <EstimateCostSection ref={contactsRef}/>
-            <ArticlesSection ref={articlesRef} />
-            <Footer />
-            <BackToTopButton />
-            <CallButton />
-          </>
+          <Routes>
+            {/* الصفحة الرئيسية */}
+            <Route path="/" element={
+              <>
+                <Navbar refs={refs} />
+                <RealEstateAgentsSection />
+                <ServicesAndAboutUsSection ref={servicesRef} />
+                <PortfolioAndFeedbackSection ref={protofolio} />
+                <HowWeWorkSection ref={howToWorkRef} />
+                <EstimateCostSection ref={contactsRef} />
+                <ArticlesSection ref={articlesRef} />
+                <Footer />
+                <BackToTopButton />
+                <CallButton />
+              </>
+            } />
+
+            {/* صفحة سياسة الخصوصية */}
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          </Routes>
         </LazyMotion>
       )}
     </div>

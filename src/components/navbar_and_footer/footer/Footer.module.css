@@ -31,7 +31,9 @@
   font-weight: 500;
   cursor: pointer;
 }
-
+.telNumber:hover{
+  color: #c8a180;
+}
 .socialsBlock {
   font-size: 1.5rem;
   font-weight: 500;
@@ -56,6 +58,7 @@
 
 .socialIcon:hover {
   transform: scale(1.1);
+  color: #c8a180;
 }
 
 .brandBlock {
@@ -64,6 +67,24 @@
   width: 100%;
   text-align: center;
    color: #b5621f; 
+}
+/***********************policy******/
+.policyLinkWrapper {
+  text-align: center;
+  margin-top: 2.5rem
+}
+
+.policyLink {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.policyLink:hover {
+  color: #c8a180;
 }
 
 /* Media Queries */

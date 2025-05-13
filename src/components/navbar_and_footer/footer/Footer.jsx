@@ -19,6 +19,10 @@ export const Footer = forwardRef((props, ref) => {
         >
 
 <div className={classes.footerContent}>
+<div className={classes.policyLinkWrapper}>
+  <a href="/privacy-policy" className={classes.policyLink}>سياسة الخصوصية</a>
+</div>
+
 
 <div className={`${classes.footerItem} ${classes.socialsBlock}`}>
 <FontAwesomeIcon icon={faPhone} className={classes.socialIcon}/>
@@ -29,7 +33,7 @@ export const Footer = forwardRef((props, ref) => {
 
 <div className={`${classes.footerItem} ${classes.socialsBlock}`}>
 <FontAwesomeIcon icon={faEnvelope} className={classes.socialIcon} />
-<p className={classes.telNumber}>suhailrealestatecompany@gmail.com</p>
+<p className={classes.telNumber}>info@suhailre.com</p>
 </div>
 
 <div className={`${classes.footerItem} ${classes.socialsBlock}`}>

@@ -40,10 +40,10 @@ export const ConsultationRequestForm = () => {
 
     emailjs
       .send(
-        "service_ntcnzyu",       // ← Replace with your actual Service ID
-        "template_sj0gkzg",      // ← Replace with your actual Template ID
+        "service_obwl6bn",       // ← Replace with your actual Service ID
+        "template_an82u89",      // ← Replace with your actual Template ID
         templateParams,
-        "sun3j_SbaRa2Q8mFS"       // ← Replace with your actual Public Key
+        "qqZc4MoYoepYD3BFM"       // ← Replace with your actual Public Key
       )
       .then(() => {
         setName("");
