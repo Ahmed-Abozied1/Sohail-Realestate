@@ -27,5 +27,6 @@ export const CustomPhoneInput = ({ getValues, bgColor }) => {
       style={bgColor ? { background: bgColor } : {}}
       maxLength={10}
     />
+    
   );
 };
