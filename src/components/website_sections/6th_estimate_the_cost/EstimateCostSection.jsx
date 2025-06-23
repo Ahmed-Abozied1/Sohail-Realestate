@@ -20,13 +20,12 @@ export const EstimateCostSection = forwardRef((props, ref) => {
         transition={{ delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <p>
+        <p>  
           <span className={classes.orangeText}>تـــواصـــل مـــعنـــا</span>
         </p>
 
         {/* <p className={classes.subTitle}>Send us your telephone number to get a free consultation</p> */}
       </motion.div>
-
       <ConsultationRequestForm />
     </motion.div>
   );

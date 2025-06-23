@@ -3,10 +3,12 @@ import classes from "./Navbar.module.css";
 import brandLogo from "../images/navbar-logo.png";
 import hambMenu from "../images/hamburger-menu.svg";
 import xMenu from "../images/x-menu.svg";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from "react-router-dom";
+
 
 export const Navbar = ({ refs }) => {
   const { servicesRef, protofolio, howToWorkRef, articlesRef, contactsRef } = refs;
+  const location = useLocation();
 
   const menuItems = [
     { title: "خدماتنـا", ref: servicesRef },
@@ -71,10 +73,10 @@ export const Navbar = ({ refs }) => {
           <div
             className={classes.navbarLinks}
             onClick={() => scrollToSection(item.title, item.ref)}
-          >
+          >   
             {item.title}
           </div>
-        </li>
+        </li>  
       ))}
     </ul>
   );
@@ -83,9 +85,22 @@ export const Navbar = ({ refs }) => {
     <div className={`${classes.navbar} ${isScrolled ? classes.navbarScrolled : ''}`}>
       <nav className={classes.navbarItems}>
         <div className={classes.navbarLogo}>
-          <Link to="/" target="blanc">
+          {/* <Link to="/" >
             <img className={classes.logoImg} src={brandLogo} alt="Logo" />
-          </Link>
+          </Link> */}
+          <Link
+  to="/"
+  onClick={(e) => {
+    if (location.pathname === "/") {
+      // نفس الصفحة، نعمل reload يدوي
+      e.preventDefault();
+      window.location.reload();
+    }
+  }}
+>
+  <img className={classes.logoImg} src={brandLogo} alt="Logo" />
+</Link>
+
           <span className={classes.logoText}>
             سُهيـل <span className={classes.redText}>العقارية</span>
           </span>
@@ -99,10 +114,11 @@ export const Navbar = ({ refs }) => {
           )}
         </div>
 
+
         {getMenuUI(false)}
       </nav>
 
       {hamburgerClicked && getMenuUI(true)}
-    </div>
+    </div> 
   );
 };

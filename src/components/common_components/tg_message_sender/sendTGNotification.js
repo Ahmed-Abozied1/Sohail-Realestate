@@ -11,7 +11,7 @@ export const sendTGNotification = async (message, setLoading) => {
     const status = await axios.post(URI_API, {
         chat_id: CHAT_ID, 
         text: message, 
-        parse_mode: 'HTML'
+        parse_mode: 'HTML'    
     })
     .then(response => {
         setLoading(false);

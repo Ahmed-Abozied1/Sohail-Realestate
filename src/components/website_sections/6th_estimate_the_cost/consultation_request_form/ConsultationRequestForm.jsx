@@ -18,12 +18,14 @@ export const ConsultationRequestForm = () => {
     setName(value);
     setIsNameEmpty(value === "");
   };
-
+ 
   const getNumberAndValidation = (number, validation) => {
     setPhoneNumber(number);
     setIsPhoneNumCorrect(validation);
   };
 
+ 
+ 
   const commentInputHandler = (event) => {
     setComment(event.target.value);
   };
@@ -45,6 +47,7 @@ export const ConsultationRequestForm = () => {
         templateParams,
         "qqZc4MoYoepYD3BFM"       // ← Replace with your actual Public Key
       )
+   
       .then(() => {
         setName("");
         setIsNameEmpty(true);
@@ -74,6 +77,7 @@ export const ConsultationRequestForm = () => {
         <div className={classes.errorMessage}>
           حدث خطأ أثناء الإرسال! حاول مرة أخرى لاحقًا.
         </div>
+       
       )}
 
       <input
@@ -92,12 +96,12 @@ export const ConsultationRequestForm = () => {
       <textarea
         className={classes.commentInput}
         type="text"
-        rows={3}
+        rows={3}  
         value={comment}
         onChange={commentInputHandler}
         placeholder="اكتب طلبك هنا..."
       />
-
+      
       <button
         className={classes.callbackBtn}
         onClick={handleSubmit}

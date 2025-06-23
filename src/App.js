@@ -18,7 +18,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   const servicesRef   = useRef(null);
-  const protofolio    = useRef(null);
+  const protofolio    = useRef(null); 
   const howToWorkRef  = useRef(null);
   const articlesRef   = useRef(null);
   const contactsRef   = useRef(null);
@@ -45,9 +45,9 @@ function App() {
 
     return () => window.removeEventListener("load", handleLoad);
   }, []);
-
+ 
   return (
-    <div className="App">
+    <div className="App">  
       {loading ? (
         <div className="loading-screen">
           <div className="spinner"></div>
@@ -56,7 +56,8 @@ function App() {
         <LazyMotion features={domAnimation}>
           <Routes>
             {/* الصفحة الرئيسية */}
-            <Route path="/" element={
+            
+            <Route path="/" element={           
               <>
                 <Navbar refs={refs} />
                 <RealEstateAgentsSection />
@@ -71,7 +72,8 @@ function App() {
               </>
             } />
 
-            {/* صفحة سياسة الخصوصية */}
+            {/* صفحة سياسة الخصوصية */} 
+         
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </LazyMotion>

@@ -28,12 +28,12 @@ import project3Pic16 from "./images/16.jpg";
 import project3Pic17 from "./images/17.jpg";
 import project3Pic18 from "./images/18.jpg";
 import project3Pic19 from "./images/19.jpg";
-
 const projects = [
   {
+    
     id: 1,
     title: "سهيــل 165 - حى الزهـراء",
-    images: [
+    images: [         
       project1Pic1, project1Pic2, project1Pic3,
       project1Pic4, project1Pic5, project2Pic6,
       project2Pic7, project2Pic8, project2Pic9
@@ -83,7 +83,7 @@ export const PortfolioAndFeedbackSection = forwardRef((props, ref) => {
           </motion.div>
         ))}
       </div>
-
+     
       {selectedProject && (
         <div className={classes.modal}>
           <div className={classes.modalContent}>
@@ -91,7 +91,7 @@ export const PortfolioAndFeedbackSection = forwardRef((props, ref) => {
               &times;
             </button>
             <h3 className={classes.modalTitle}>{selectedProject.title}</h3>
-
+       
             <Swiper
               modules={[Pagination]}
               pagination={{ clickable: true }}
@@ -99,6 +99,7 @@ export const PortfolioAndFeedbackSection = forwardRef((props, ref) => {
               slidesPerView={1}
               className={classes.modalSwiper}
             >
+
               {selectedProject.images.map((img, i) => (
                 <SwiperSlide key={i}>
                   <img src={img} alt={`img-${i}`} className={classes.modalImage} />

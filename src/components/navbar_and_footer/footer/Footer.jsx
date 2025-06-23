@@ -52,6 +52,7 @@ export const Footer = forwardRef((props, ref) => {
     <a href="https://www.tiktok.com/@suhail_realestate?_t=ZS-8vYdr5zf45a&_r=1" target="blanc">
       <FontAwesomeIcon icon={faTiktok} className={classes.socialIcon} />
     </a>
+    
   </motion.div>
   <p className={classes.telNumber}>تابعنا على منصات التواصل الاجتماعي</p>
 

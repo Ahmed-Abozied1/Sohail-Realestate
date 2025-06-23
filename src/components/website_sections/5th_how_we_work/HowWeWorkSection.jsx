@@ -40,8 +40,10 @@ export const HowWeWorkSection = forwardRef((props, ref) => {
               </p>
               <p className={classes.valueDesc}>
                 {value.description}
+              
               </p>
             </div>
+           
           </motion.div>
         ))}
       </div>
