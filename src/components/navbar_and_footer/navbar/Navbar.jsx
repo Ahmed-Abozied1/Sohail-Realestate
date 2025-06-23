@@ -5,7 +5,6 @@ import hambMenu from "../images/hamburger-menu.svg";
 import xMenu from "../images/x-menu.svg";
 import { Link, useLocation } from "react-router-dom";
 
-
 export const Navbar = ({ refs }) => {
   const { servicesRef, protofolio, howToWorkRef, articlesRef, contactsRef } = refs;
   const location = useLocation();
@@ -85,10 +84,10 @@ export const Navbar = ({ refs }) => {
     <div className={`${classes.navbar} ${isScrolled ? classes.navbarScrolled : ''}`}>
       <nav className={classes.navbarItems}>
         <div className={classes.navbarLogo}>
-          {/* <Link to="/" >
+          <Link to="/" >
             <img className={classes.logoImg} src={brandLogo} alt="Logo" />
-          </Link> */}
-          <Link
+          </Link>
+          {/* <Link
   to="/"
   onClick={(e) => {
     if (location.pathname === "/") {
@@ -99,7 +98,7 @@ export const Navbar = ({ refs }) => {
   }}
 >
   <img className={classes.logoImg} src={brandLogo} alt="Logo" />
-</Link>
+</Link> */}
 
           <span className={classes.logoText}>
             سُهيـل <span className={classes.redText}>العقارية</span>
